@@ -9,67 +9,35 @@
 }
 body {
 	min-width: 360px;
-	max-width: 1600px;
+	max-width: 1200px;
+	margin: 0 auto;
 	font-family: 'Mukta', sans-serif;
-}
-a {
-	text-decoration: inherit;
-	color: black;
-	font-weight: 500;
+	display: flex;
+	flex-direction: column;
+	background-color: #dcdcde;
 }
 .first-section {
-	padding-top: 65px;
 	width: 100%;
 	color: white;
 	text-transform: uppercase;
 	text-align: center;
 	background-image: url('../header_background.jpg');
-	background-position: center;
-}
-.menu {
-	padding: 20px;
-	font-size: 1em;
-	background-color: #15263e;
-	position: fixed;
-	width: 100%;
-	top: 0;
-}
-.menu input {
-	display: none;
-}
-.menu-title {
-	font-size: 1.6em;
-	font-weight: bold;
-	display: block;
-}
-#menu-checker:checked ~ .menu-list {
-	display: none;
+	background-position: bottom;
+	background-size: cover;
 }
 .text-gradient {
 	color: #a21af0;
-    background: linear-gradient(45deg, #a21af0 0%, #ff0072 100%);
+    background: linear-gradient(45deg, #ad1fff 0%, #ff0072 100%);
   	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
 }
-.menu li {
-	list-style: none;
-	padding: 10px;
-}
-.menu-list li:hover {
-	background-color: #25364e;
-}
-.menu-list .closer {
-	font-size: 0.8em;
-	color: grey;
-	display: block;
-}
 h1 {
-	font-size: 5em;
+	font-size: 4em;
 	display: inline;
 	line-height: 1em;
 }
 h2 {
-	font-size: 2.6em;
+	font-size: 2.4em;
 }
 .top-banner {
 	width: 100%;
@@ -78,6 +46,7 @@ h2 {
 	background-color: rgba(46, 49, 146, 0.4);
 }
 .top-banner p {
+	font-size: 1.3em;
 	margin: 40px;
 	font-weight: 600;
 }
@@ -88,28 +57,34 @@ button {
 	padding: 10px;
 	background: linear-gradient(45deg, #a21af0 0%, #ff0072 100%);
 }
+.about {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: white;
+}
+.about-section {
+	margin-top: 10px;
+	width: 300px;
+	overflow: hidden;
+	text-align: center;
+	padding: 20px;
+}
 .about-section h3 {
 	color: #a21af0;
-	font-size: 1em;
+	font-size: 1.2em;
 	margin-bottom: 20px;
 }
 .about-section h2,h3 {
 	text-transform: uppercase;
 	font-weight: bold;
 }
-.about-section {
-	margin: 0 auto;
-	max-width: 310px;
-	overflow: hidden;
-	text-align: center;
-	padding: 20px;
-}
 .about img {
 	width: 100%;
 }
 .full-level {
 	margin: 5% auto;
-	width: 60%;
+	width: 90%;
 	height: 8px;
 	border-radius: 4px;
 	background-color: #ff0072;
@@ -128,48 +103,24 @@ button {
 .js-level {
 	width: 83%;
 }
-.php-level {
-	width: 37%;
+.qa-level {
+	width: 88%;
 }
-.about footer {
-	background-color: #dcdcde;
-}
-.about-footer-section-circle {
-	margin: 5px auto;
-	width: 70px;
-	height: 70px;
-	border-radius: 50%;
-	background-color: #374362;
-}
-.about-footer-section {
-	max-width: 320px;
-	padding: 10px;
-	margin: 0 auto;
-	display: flex;
-	justify-content: center;
-}
-.about-footer-section-right {
-	padding-left: 20px;
-	flex-grow: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-.about-footer-section-tittle {
-	font-size: 1.2em;
-	text-transform: uppercase;
-	width: 100%;
-}
-.about-footer-section-content {
-	width: 100%;
+.design-level {
+	width: 36%;
 }
 .our-services {
 	text-align: center;
+	margin: 10px 0;
 }
-.our-services section {
-	max-width: 320px;
+.our-services-main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.our-services-section {
+	width: 300px;
 	padding: 10px;
-	margin: 0 auto;
 }
 .our-services-section-circle {
 	margin: 0 auto;
@@ -183,10 +134,60 @@ button {
 	font-size: 2em !important;
 }
 .my-projects {
-	background-color: #dcdcde;
+	padding: 10px;
 	text-align: center;
+	background-color: white;
 }
 .project {
 	max-width: 320px;
 	margin: 0 auto;
+}
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.about-footer-section {
+	width: 300px;
+	padding: 10px;
+	position: relative;
+}
+.about-footer-section-circle {
+	top: 0;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background-color: #374362;
+	position: absolute;
+	top: 10px;
+	display: inline-block;
+}
+.about-footer-section-right {
+	padding-left: 90px;
+}
+.about-footer-section-tittle {
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+a {
+	text-decoration: inherit;
+	color: black;
+	font-weight: 500;
+}
+
+@media (min-width: 610px) {
+	.our-services-main {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: flex-start;
+	}
+}
+@media (min-width: 910px) {
+	.about, footer {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: flex-start;
+	}
 }
